@@ -10,7 +10,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS } }
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Install Azure Cost CLI
         run: dotnet tool install -g azure-cost-cli --no-cache
