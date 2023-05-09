@@ -7,6 +7,10 @@ jobs:
   run-azure-cost-cli:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
       - name: Azure Login
         uses: azure/login@v1
         with:
